@@ -56,3 +56,26 @@ EXIT;
 3. DB_PASS
 4. DB_PORT
 5. DB_NAME
+
+## Steps to Deploy App
+1. Launch the Instance (t2.medium)
+
+## Database layer
+1. Run the database container (mariadb) at port 3306:3306 and also attach volume to it
+   
+   ```bash
+   docker run -d -p 3306:3306 -v mariadb_data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=redhat mariadb
+   ```
+   
+2. enter into mariadb
+   
+   ```bash
+   docker exec -it mariadb -uroot -predhat
+   ```
+3. create database
+   
+   ```sql
+   create databse student_db;
+   ```
+4. exit
+   
