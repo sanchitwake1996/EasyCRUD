@@ -58,7 +58,7 @@ EXIT;
 5. DB_NAME
 
 ## Steps to Deploy App
-1. Launch the Instance (t2.medium)
+Launch the Instance (t2.medium)
 
 ## Database layer
 1. Run the database container (mariadb) at port 3306:3306 and also attach volume to it
@@ -78,4 +78,10 @@ EXIT;
    create databse student_db;
    ```
 4. exit
-   
+
+## Backend
+1. create dockerfile
+2. Create application.properties file and inside the file IP will be IP of database container.
+3. PUSH the changes to git
+
+
