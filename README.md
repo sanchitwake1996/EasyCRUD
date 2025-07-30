@@ -83,12 +83,14 @@ Launch the Instance (t2.medium)
 1. create dockerfile
 2. Create application.properties file and inside the file IP will be IP of database container.
 3. PUSH the changes to git
-4. build image
+4. Cd to the backend 
+5. build image
    ```bash
    docker build -t <backendfile> .
    ```
 6. run image at port 8080
-   `` bash
+
+   ``` bash
    docker run -d -p 8080:8080 <imageName>
    ```
 
