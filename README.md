@@ -98,7 +98,7 @@ Launch the Instance (t2.medium)
 1. Create dockerfile
 2. edit .env file and IP will be instance IP
 3. Build image
-4. Run Image
+4. Run Image at port 80
 
 ## Steps to Deploy Via Docker Compose
 1. Create Compose.yml file
