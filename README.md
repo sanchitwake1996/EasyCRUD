@@ -60,7 +60,7 @@ EXIT;
 ## Steps to Deploy App
 Launch the Instance (t2.medium)
 
-## Database layer
+# Database layer
 1. Run the database container (mariadb) at port 3306:3306 and also attach volume to it
    
    ```bash
@@ -79,9 +79,16 @@ Launch the Instance (t2.medium)
    ```
 4. exit
 
-## Backend
+# Backend
 1. create dockerfile
 2. Create application.properties file and inside the file IP will be IP of database container.
 3. PUSH the changes to git
+4. build image
+   ```docker build -t <backendfile> .```
+5. run image at port 8080
+   `` docker run -d -p 8080:8080 <imageName>
+
+
+
 
 
