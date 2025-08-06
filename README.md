@@ -86,7 +86,7 @@ Launch the Instance (t2.medium)
 4. Cd to the backend 
 5. build image
    ```bash
-   docker build -t <backendfile> .
+   docker build -t <tagname> .
    ```
 6. run image at port 8080
 
@@ -111,6 +111,7 @@ Launch the Instance (t2.medium)
    ```bash
    docker compose down
    ```
+
 
 
 
