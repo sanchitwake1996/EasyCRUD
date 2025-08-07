@@ -25,6 +25,7 @@ spec:
           valueFrom:
             secretKeyRef:
               key: DB_NAME 
+        ports:
         - containerPort: 3306
           name: mysql
         volumeMounts:
