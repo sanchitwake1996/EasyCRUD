@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: student-db-sts
+spec:
+  selector:
+    matchLabels:
+      app: student-app-db
+  serviceName: student-app-db-svc
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: student-app-db
+    spec:
+      containers:
+      - name: student-app-container
+        image: maria-db-latest
+        env: 
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              key: DB_PASS 
+        - name: MYSQL_DATABASE
+          valueFrom:
+            secretKeyRef:
+              key: DB_NAME 
+        - containerPort: 3306
+          name: mysql
+        volumeMounts:
+        - name: student-db-volume
+          mountPath: /var/lib/mysql
+      volumes: 
+      - name: student-db-volume
+        persistentVolumeClaim: 
+          claimName: student-app-pvc
