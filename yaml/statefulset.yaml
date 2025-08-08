@@ -9,7 +9,7 @@ spec:
     matchLabels:
       app: student-app-db
   serviceName: student-app-db-svc
-  replicas: 1
+  replicas: 2
   template:
     metadata:
       labels:
